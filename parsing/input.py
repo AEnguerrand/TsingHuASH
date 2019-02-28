@@ -1,4 +1,10 @@
-def parse_input(filename):
+FILE_A = 'dataset/a_example.txt'
+FILE_B = 'dataset/b_lovely_landscapes.txt'
+FILE_C = 'dataset/c_memorable_moments.txt'
+FILE_D = 'dataset/d_pet_pictures.txt'
+FILE_E = 'dataset/e_shiny_selfies.txt'
+
+def parse_input(filename = FILE_A):
     pictures = []
     header = []
     with open(filename) as f:
