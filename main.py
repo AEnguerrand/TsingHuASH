@@ -1,6 +1,8 @@
 import sys
 import parsing.input
 import parsing.ouput
+import calc.calc_basical
+
 
 def start():
     if len(sys.argv) != 2:
@@ -8,6 +10,8 @@ def start():
         exit(1)
     header, pictures = parsing.input.parse_input(sys.argv[1])
     parsing.input.debug_input(header, pictures)
+
+    slideshow = calc.calc_basical.basical(header, pictures)
 
     ## REMOVE IT
     slideshow = []
