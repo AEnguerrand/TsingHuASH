@@ -1,3 +1,4 @@
+
 def score(Tag1,Tag2):
     # Tag1 et Tag2 listes de tags ex: ["cat", "banana", "b"]
     # Calcule l'intersection puis retire la taille de l'intersection aux 2 autres sections pour avoir la taille de la partie exclue A\B
@@ -21,11 +22,12 @@ def tags_applatis(Chemin, Pictures):
             applati.append(list(V1.union(V2)))
     return applati
 
-
 def score_final(Chemin, Pictures):
     #Calcule le score final en créant d'abord une liste des tags applatis
     ScoreFinal =  0
     T = tags_applatis(Chemin,Pictures)
     for i in range(len(Chemin)-1):
-        ScoreFinal += score(T[i],T[i+1])
+        ScoreLocal = score(T[i],T[i+1])
+        ScoreFinal += ScoreLocal
+        print('De ' + str(Chemin[i]) + ' à ' +  str(Chemin[i+1])+ ' : ' + str(ScoreLocal))
     return ScoreFinal
