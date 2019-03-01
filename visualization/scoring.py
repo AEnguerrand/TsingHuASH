@@ -33,7 +33,7 @@ def score_final(Chemin, Pictures):
     for i in range(len(Chemin)-1):
         ScoreLocal = score(T[i],T[i+1])
         ScoreFinal += ScoreLocal
-        print('De ' + str(Chemin[i]) + ' à ' +  str(Chemin[i+1])+ ' : ' + str(ScoreLocal))
+        #print('De ' + str(Chemin[i]) + ' à ' +  str(Chemin[i+1])+ ' : ' + str(ScoreLocal))
     return ScoreFinal
 
 def eval_swap(L,i,j,Pictures):

@@ -3,14 +3,12 @@ def write_output(filename, slideshow):
     with open(filename + ".out", 'w+') as f:
         i = 0
         size_ssw = len(slideshow)
-        f.write(str(size_ssw))
-        f.write(os.linesep)
+        f.write(str(size_ssw)+"\n")
         while i < size_ssw:
             if type(slideshow[i]) is int:
-                f.write(str(slideshow[i]))
+                f.write(str(slideshow[i])+ '\n')
             else:
-                f.write(' '.join(str(x) for x in slideshow[i]))
-            f.write(os.linesep)
+                f.write(' '.join(str(x) for x in slideshow[i]) + '\n')
             i += 1
     print("FILE RESULT PRINT IN:", filename + ".out")
 

@@ -15,7 +15,7 @@ def trieur_orientation(Pictures):
     paire = -1
     for i in range(len(Pictures)):
         x = Pictures[i]
-        if x[0] == 'H':
+        if x[1] == 'H':
             H.append(i)
         else:
             if paire == -1:
