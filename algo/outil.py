@@ -9,20 +9,20 @@ def swap_triolisme(L,i,j,k):
 
 def trieur_orientation(Pictures):
     # Renvoie la liste des id avec d'abord les indices horizontaux puis les indices verticaux par paires arbitraires
-    # Ex: [5,4,8,9,(1,2),(6,7)] 
+    # Ex: [5,4,8,9,(1,2),(6,7)]
     H = []
     V = []
     paire = -1
     for i in range(len(Pictures)):
         x = Pictures[i]
-        if x[1] == 'H':
+        if x[0] == 'H':
             H.append(i)
         else:
             if paire == -1:
                 paire = i
             else:
-                V.append((paire,i))
+                V.append((paire, i))
                 paire = -1
-    if paire !=-1:
+    if paire != -1:
         print('vertical tout seul!!!')
     return H + V

@@ -47,6 +47,7 @@ def run(pictures,initial_path=[], max_iteration=1000, temperature=5):
                     print(f'{best_score}\t Temp {temperature} \n Iter temp {iter_temperature}')
                 current_path = new_path
                 current_score = new_score
+            iteration +=1
 
 
         temperature *= factor
